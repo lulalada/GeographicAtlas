@@ -13,6 +13,16 @@
 		B1189B3D2A0E7D5000CD8329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1189B3B2A0E7D5000CD8329 /* Main.storyboard */; };
 		B1189B3F2A0E7D5200CD8329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1189B3E2A0E7D5200CD8329 /* Assets.xcassets */; };
 		B1189B422A0E7D5200CD8329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1189B402A0E7D5200CD8329 /* LaunchScreen.storyboard */; };
+		B1189B4B2A0E841600CD8329 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1189B492A0E841600CD8329 /* CountryCell.swift */; };
+		B1189B4C2A0E841600CD8329 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1189B4A2A0E841600CD8329 /* CountryCell.xib */; };
+		B1189B4F2A0E8FEC00CD8329 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1189B4E2A0E8FEC00CD8329 /* Alamofire */; };
+		B1189B512A0E91DB00CD8329 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1189B502A0E91DB00CD8329 /* CountryModel.swift */; };
+		B1189B532A0EA1C600CD8329 /* AtlasManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1189B522A0EA1C600CD8329 /* AtlasManager.swift */; };
+		B1189B582A0EC0D500CD8329 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B1189B572A0EC0D500CD8329 /* Kingfisher */; };
+		B1189B5A2A0F639800CD8329 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1189B592A0F639800CD8329 /* CountryViewController.swift */; };
+		B1189B5C2A0F663500CD8329 /* CountryCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1189B5B2A0F663500CD8329 /* CountryCellDelegate.swift */; };
+		B1189B5E2A0FD5C800CD8329 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1189B5D2A0FD5C800CD8329 /* CountryManager.swift */; };
+		B1C16EB92A1403EA00075BFA /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = B1C16EB82A1403EA00075BFA /* SkeletonView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,13 @@
 		B1189B3E2A0E7D5200CD8329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1189B412A0E7D5200CD8329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1189B432A0E7D5200CD8329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1189B492A0E841600CD8329 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		B1189B4A2A0E841600CD8329 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		B1189B502A0E91DB00CD8329 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		B1189B522A0EA1C600CD8329 /* AtlasManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasManager.swift; sourceTree = "<group>"; };
+		B1189B592A0F639800CD8329 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		B1189B5B2A0F663500CD8329 /* CountryCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellDelegate.swift; sourceTree = "<group>"; };
+		B1189B5D2A0FD5C800CD8329 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1189B582A0EC0D500CD8329 /* Kingfisher in Frameworks */,
+				B1C16EB92A1403EA00075BFA /* SkeletonView in Frameworks */,
+				B1189B4F2A0E8FEC00CD8329 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +76,54 @@
 		B1189B342A0E7D5000CD8329 /* GeographicAtlas */ = {
 			isa = PBXGroup;
 			children = (
+				B1C16EBF2A14358000075BFA /* Manager */,
+				B1C16EBE2A14356B00075BFA /* View */,
+				B1C16EBC2A14354100075BFA /* Controller */,
+				B1C16EBB2A14350200075BFA /* Model */,
 				B1189B352A0E7D5000CD8329 /* AppDelegate.swift */,
 				B1189B372A0E7D5000CD8329 /* SceneDelegate.swift */,
-				B1189B392A0E7D5000CD8329 /* ViewController.swift */,
-				B1189B3B2A0E7D5000CD8329 /* Main.storyboard */,
+				B1189B5B2A0F663500CD8329 /* CountryCellDelegate.swift */,
 				B1189B3E2A0E7D5200CD8329 /* Assets.xcassets */,
 				B1189B402A0E7D5200CD8329 /* LaunchScreen.storyboard */,
 				B1189B432A0E7D5200CD8329 /* Info.plist */,
 			);
 			path = GeographicAtlas;
+			sourceTree = "<group>";
+		};
+		B1C16EBB2A14350200075BFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1189B502A0E91DB00CD8329 /* CountryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1C16EBC2A14354100075BFA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B1189B392A0E7D5000CD8329 /* ViewController.swift */,
+				B1189B592A0F639800CD8329 /* CountryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B1C16EBE2A14356B00075BFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1189B3B2A0E7D5000CD8329 /* Main.storyboard */,
+				B1189B4A2A0E841600CD8329 /* CountryCell.xib */,
+				B1189B492A0E841600CD8329 /* CountryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1C16EBF2A14358000075BFA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B1189B522A0EA1C600CD8329 /* AtlasManager.swift */,
+				B1189B5D2A0FD5C800CD8329 /* CountryManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +142,11 @@
 			dependencies = (
 			);
 			name = GeographicAtlas;
+			packageProductDependencies = (
+				B1189B4E2A0E8FEC00CD8329 /* Alamofire */,
+				B1189B572A0EC0D500CD8329 /* Kingfisher */,
+				B1C16EB82A1403EA00075BFA /* SkeletonView */,
+			);
 			productName = GeographicAtlas;
 			productReference = B1189B322A0E7D5000CD8329 /* GeographicAtlas.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +175,11 @@
 				Base,
 			);
 			mainGroup = B1189B292A0E7D5000CD8329;
+			packageReferences = (
+				B1189B4D2A0E8FEC00CD8329 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B1189B562A0EC0D500CD8329 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B1C16EB72A1403EA00075BFA /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
 			productRefGroup = B1189B332A0E7D5000CD8329 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1189B4C2A0E841600CD8329 /* CountryCell.xib in Resources */,
 				B1189B422A0E7D5200CD8329 /* LaunchScreen.storyboard in Resources */,
 				B1189B3F2A0E7D5200CD8329 /* Assets.xcassets in Resources */,
 				B1189B3D2A0E7D5000CD8329 /* Main.storyboard in Resources */,
@@ -138,9 +208,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1189B4B2A0E841600CD8329 /* CountryCell.swift in Sources */,
+				B1189B5A2A0F639800CD8329 /* CountryViewController.swift in Sources */,
 				B1189B3A2A0E7D5000CD8329 /* ViewController.swift in Sources */,
+				B1189B5C2A0F663500CD8329 /* CountryCellDelegate.swift in Sources */,
 				B1189B362A0E7D5000CD8329 /* AppDelegate.swift in Sources */,
+				B1189B5E2A0FD5C800CD8329 /* CountryManager.swift in Sources */,
+				B1189B532A0EA1C600CD8329 /* AtlasManager.swift in Sources */,
 				B1189B382A0E7D5000CD8329 /* SceneDelegate.swift in Sources */,
+				B1189B512A0E91DB00CD8329 /* CountryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +432,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1189B4D2A0E8FEC00CD8329 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B1189B562A0EC0D500CD8329 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		B1C16EB72A1403EA00075BFA /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1189B4E2A0E8FEC00CD8329 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1189B4D2A0E8FEC00CD8329 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B1189B572A0EC0D500CD8329 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1189B562A0EC0D500CD8329 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		B1C16EB82A1403EA00075BFA /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1C16EB72A1403EA00075BFA /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1189B2A2A0E7D5000CD8329 /* Project object */;
 }
