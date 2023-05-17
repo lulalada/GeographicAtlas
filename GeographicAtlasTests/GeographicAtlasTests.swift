@@ -28,9 +28,9 @@ final class GeographicAtlasTests: XCTestCase {
             
         class MockDelegate: CountryManagerDelegate {
             var onCountryModelDidUpdateCalled = false
-            var countryModel: [CountryModel]?
+            var countryModel: CountryModel?
 
-            func onCountryModelDidUpdate(with model: [CountryModel]) {
+            func onCountryModelDidUpdate(with model: CountryModel) {
                 onCountryModelDidUpdateCalled = true
                 countryModel = model
             }
@@ -45,7 +45,7 @@ final class GeographicAtlasTests: XCTestCase {
         AF.request(urlString).responseDecodable(of: [CountryModel].self) { response in
             switch response.result {
             case .success(let model):
-                mockDelegate.onCountryModelDidUpdate(with: model)
+                mockDelegate.onCountryModelDidUpdate(with: model[0])
             case .failure(let error):
                 XCTFail("API request failed with error: \(error)")
             }
@@ -57,5 +57,8 @@ final class GeographicAtlasTests: XCTestCase {
 
         XCTAssertTrue(mockDelegate.onCountryModelDidUpdateCalled)
         XCTAssertNotNil(mockDelegate.countryModel)
+        
+        let countryModel = mockDelegate.countryModel
+        XCTAssertEqual(countryModel?.name.common, "Kazakhstan")
     }
 }

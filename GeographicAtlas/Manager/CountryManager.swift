@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 protocol CountryManagerDelegate: AnyObject {
-    func onCountryModelDidUpdate(with model: [CountryModel])
+    func onCountryModelDidUpdate(with model: CountryModel)
 }
 
 struct CountryManager {
@@ -23,7 +23,7 @@ struct CountryManager {
             switch response.result {
             case .success(let model):
                 
-                delegate?.onCountryModelDidUpdate(with: model)
+                delegate?.onCountryModelDidUpdate(with: model[0])
             case .failure(let error):
                 print(error)
             }

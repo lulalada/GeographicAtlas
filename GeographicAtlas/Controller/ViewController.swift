@@ -193,12 +193,12 @@ extension ViewController: UNUserNotificationCenterDelegate {
         let date = Date().addingTimeInterval(5)
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
     
-        let i = Int.random(in: 0...6)
-        let j = Int.random(in: 0...10)
+        let section = Int.random(in: 0...5)
+        let row = Int.random(in: 0...5)
         let identifier = UUID().uuidString
         let title = "Fun Fact"
-        let body = "Did you know that the population of \(groupedCountries[i][j].name.common) is \(groupedCountries[i][j].population) people?"
-        cca2 = groupedCountries[i][j].cca2
+        let body = "Did you know that the population of \(groupedCountries[section][row].name.common) is \(groupedCountries[section][row].population) people?"
+        cca2 = groupedCountries[section][row].cca2
         let notificationCenter = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
         content.title = title

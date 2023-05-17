@@ -45,38 +45,40 @@ class CountryViewController: UIViewController {
 //MARK: - CountryManagerDelegate extension
 
 extension CountryViewController: CountryManagerDelegate {
-    func onCountryModelDidUpdate(with model: [CountryModel]) {
-        navigation.title = model[0].name.common
-        if let subregion = model[0].subregion {
+    func onCountryModelDidUpdate(with model: CountryModel) {
+        navigation.title = model.name.common
+        if let subregion = model.subregion {
             regionLabel.text = subregion
         }
-        capitalLabel.text = model[0].capital?[0]
+        if let capital = model.capital?[0] {
+            capitalLabel.text = capital
+        }
 
-        if let latitude = model[0].capitalInfo?.latlng?[0], let longtitude = model[0].capitalInfo?.latlng?[1] {
+        if let latitude = model.capitalInfo?.latlng?[0], let longtitude = model.capitalInfo?.latlng?[1] {
             coordinatesLabel.text = "\(latitude), \(longtitude)"
             coordinatesLabel.isUserInteractionEnabled = true
             coordinatesLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(labelTapped)))
         }
         
-        if let url = model[0].maps.openStreetMaps {
+        if let url = model.maps.openStreetMaps {
             mapURL = url
         }
         
-        if let url = URL(string: model[0].flags.png) {
+        if let url = URL(string: model.flags.png) {
             let resource = ImageResource(downloadURL: url)
             flagImage.kf.setImage(with: resource)
         }
-        populationLabel.text = String(model[0].population)
-        if let area = model[0].area {
+        populationLabel.text = String(model.population)
+        if let area = model.area {
             areaLabel.text = String(area)
         }
-        if let currencies = model[0].currencies {
+        if let currencies = model.currencies {
             for (key, value) in currencies {
                 currencyLabel.text = "\(value.name) (\(value.symbol ?? "NS")) (\(key))"
 
             }
         }
-        for time in model[0].timezones {
+        for time in model.timezones {
             timezoneLabel.text?.append("\(time) ")
         }
         stack.hideSkeleton()
