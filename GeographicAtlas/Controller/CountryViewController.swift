@@ -72,15 +72,22 @@ extension CountryViewController: CountryManagerDelegate {
         if let area = model.area {
             areaLabel.text = String(area)
         }
+        
+        var currencyText = ""
         if let currencies = model.currencies {
             for (key, value) in currencies {
-                currencyLabel.text = "\(value.name) (\(value.symbol ?? "NS")) (\(key))"
-
+                currencyText.append("\(value.name) (\(value.symbol ?? "NS")) (\(key)) \n")
             }
+            currencyText = currencyText.trimmingCharacters(in: .newlines)
+            currencyLabel.text = currencyText
+
         }
+        var timeText = ""
         for time in model.timezones {
-            timezoneLabel.text?.append("\(time) ")
+            timeText.append("\(time)\n")
         }
+        timeText = timeText.trimmingCharacters(in: .newlines)
+        timezoneLabel.text = timeText
         stack.hideSkeleton()
         
     }
