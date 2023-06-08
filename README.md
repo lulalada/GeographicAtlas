@@ -1,7 +1,5 @@
 # GeographicAtlas
-GeographicAtlas for STRONG TEAM 
-* link to the recorded video: https://drive.google.com/file/d/1kzGQLA1fs6ad3WuMr60FD6BwmEAkPi2n/view?usp=sharing
-
+GeographicAtlas for 
 GeographicAtlas is an iOS app that provides information about countries around the world. It allows you to explore a list of 
 countries with expandable cells, view detailed information about a selected country, and even receive push notifications with 
 interesting facts about random countries. The app also includes unit test to ensure the accuracy of network calls.
